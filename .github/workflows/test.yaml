@@ -1,0 +1,13 @@
+name: Print Current Date
+
+on:
+  pull_request:
+    branches:
+      - '**'
+
+jobs:
+  print_date:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get current date
+        run: exit 1 && echo "The current date is $(date)"
